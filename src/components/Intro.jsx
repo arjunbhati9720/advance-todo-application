@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Typography, Button, Link } from '@mui/material';
+import { Typography, Button} from '@mui/material';
 import '../styles/Intro.css';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,6 +11,7 @@ const Intro = () => {
         const timer = setTimeout(() => {
             setShowContent(true);
         }, 500);
+        setIsLogin(JSON.parse(localStorage.getItem('login-user')))
         return () => clearTimeout(timer);
     }, []);
 
