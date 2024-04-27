@@ -1,0 +1,62 @@
+.intro-container {
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Adjust as needed */
+}
+
+.intro-content {
+    text-align: center;
+    opacity: 0;
+    /* Initially hide content */
+    transition: opacity 0.5s ease-in-out;
+    /* Apply transition effect */
+}
+
+.intro-content.show {
+    opacity: 1;
+    /* Show content with animation */
+}
+
+.intro-heading {
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    margin-bottom: 20px;
+    padding-left:70px ;
+    padding-right: 70px;
+}
+
+.intro-subheading {
+    margin-bottom: 10px;
+}
+
+.intro-list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro-list-item {
+    text-align: left;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.intro-button {
+    margin-top: 20px;
+    opacity: 0;
+    /* Initially hide button */
+    transition: opacity 0.5s ease-in-out;
+    /* Apply transition effect */
+}
+
+.intro-button.show {
+    opacity: 1;
+    /* Show button with animation */
+}
