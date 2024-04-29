@@ -20,7 +20,7 @@ const Login = () => {
 
   const submitForm = (e) => {
     e.preventDefault()
-    if (email, password) {
+    if (email && password) {
       let checkUser = JSON.parse(localStorage.getItem(`signup-user-${email}`));
       if (checkUser) {
         if (checkUser.email === email && checkUser.password === password) {
@@ -51,7 +51,7 @@ const Login = () => {
       <Typography variant="h4" align="center" gutterBottom sx={{}} >
         Login
       </Typography>
-      <form style={{ borderRadius: '30px', backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_pgoHuvuMGt_8ovZZra-dq4ZuQCHA3XsBRw&usqp=CAU", backgroundSize: "cover", width: "500px", height: "auto", padding: "40px 20px", position:'relative' }}>
+      <form style={{ borderRadius: '30px', backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_pgoHuvuMGt_8ovZZra-dq4ZuQCHA3XsBRw&usqp=CAU", backgroundSize: "cover", width: "500px", height: "auto", padding: "40px 20px", position: 'relative' }}>
         <TextField
           label="Email"
           type="email"
@@ -71,7 +71,7 @@ const Login = () => {
         <Button onClick={submitForm} variant="contained" color="primary" fullWidth sx={{ marginTop: '40px' }}>
           Login
         </Button>
-      <Link style={{position:'absolute', bottom:'5%',right:'30%'}} to={'/signup'}>If Don't have account go to signup</Link>
+        <Link style={{ position: 'absolute', bottom: '5%', right: '30%' }} to={'/signup'}>If Don't have account go to signup</Link>
       </form>
     </Container>
   );

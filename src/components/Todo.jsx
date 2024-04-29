@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TextField, Button, Container, Grid, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import { teal,pink, grey} from '@mui/material/colors';
+import { teal, grey} from '@mui/material/colors';
 
 
 
@@ -85,8 +85,8 @@ const Todo = () => {
         if (user) {
             user.todos.splice(id - 1, 1)
             localStorage.setItem(`login-user`, JSON.stringify(user))
-            let signup_user = JSON.parse(localStorage.getItem(`signup-user-${email}`))
-            let dataToStore = JSON.parse(localStorage.getItem('login-user')).todos;
+            // let signup_user = JSON.parse(localStorage.getItem(`signup-user-${email}`))
+            // let dataToStore = JSON.parse(localStorage.getItem('login-user')).todos;
         }
         if (user.todos.length > 0) {
             setId(user.todos[user.todos.length - 1]?.id + 1)
@@ -129,7 +129,7 @@ const Todo = () => {
     const handleUpdate = (id) => {
         let userSTodos = JSON.parse(localStorage.getItem('login-user')).todos
         userSTodos.forEach((ele) => {
-            if (ele.id == id) {
+            if (ele.id === id) {
                 setId(ele.id);
                 setTitle(ele.title)
                 setEmail(ele.email)
